@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sobre mí</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link href="Estilo CSS/ListaEstilos.css" rel="stylesheet" type="text/css">
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+  </script>
+</head>
+	
+<body>
+	<div class="topnav">
+	 <img src="image/logo_Mesa de trabajo 1.png" class="logo_web">
+	  <a href="html/Contacto.html">CONTACTO</a>
+	  <a href="html/Experiencia.html">EXPERIENCIA</a>
+	  <a href="html/Mi trabajo.html">MI TRABAJO</a>
+	  <a href="html/Sobre mí.html">SOBRE MÍ</a>
+	  <a class="active" href="html/Inicio.html">INICIO</a>
+	</div>
+<header>
+  <div class="banner">
+	<br>
+	<h1 class="animate__animated animate__fadeIn animate__delay-1s Encabezado">¡Hola, Bienvenido!</h1>
+	<p class="animate__animated animate__fadeIn animate__delay-1s texto_titulo">Gracias por mostrar interés en mi trabajo, siéntete libre de explorar mi página a gusto,<br> si te interesa realizar algún proyecto, revisa mi información de contacto, con gusto te responderé.</p><br><br><br>
+	</div>
+  </header>
+	
+	<main>
+<h2 class="animate__animated animate__fadeIn animate__delay-1s subtitulo">Mis últimos trabajos</h2>
+    <div class="center">
+		
+		
+<div class="animate__animated animate__fadeIn animate__delay-1s row">
+  <div class="colt">
+    <img src="image/cachito.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="colt">
+    <img src="image/Captura de pantalla (1143).png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="colt">
+    <img src="image/kffto_!.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="colt">
+    <img src="image/abcM.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="../image/cachito.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="../image/Captura de pantalla (1143).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="../image/kffto_!.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="../image/abcM.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="colt">
+      <img class="demo cursor" src="../image/cachito.jpg" style="width:100%" onclick="currentSlide(1)" alt="Cachito de Pizza">
+    </div>
+    <div class="colt">
+      <img class="demo cursor" src="../image/Captura de pantalla (1143).png" style="width:100%" onclick="currentSlide(2)" alt="KFFTO Video Animado">
+    </div>
+    <div class="colt">
+      <img class="demo cursor" src="../image/kffto_!.jpg" style="width:100%" onclick="currentSlide(3)" alt="KFFTO Post">
+    </div>
+    <div class="colt">
+      <img class="demo cursor" src="../image/abcM.jpg" style="width:100%" onclick="currentSlide(4)" alt="ABC ilustrado">
+    </div>
+  </div>
+</div>
+
+		
+		
+	  <a href="html/Mi trabajo.html">
+	  <button class="button center">Conocér más</button>
+	  </a>	
+	</div>
+</main>
+	
+
+	
+	<footer>
+	  <h5 class="marca">L e x   A r t  2021</h5>
+	</footer>
+</body>
+</html>
